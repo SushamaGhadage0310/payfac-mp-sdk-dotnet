@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Vantiv/payfac-mp-sdk-dotnet.svg?branch=13.x)](https://travis-ci.org/Vantiv/payfac-mp-sdk-dotnet)
-![Github All Releases](https://img.shields.io/github/downloads/vantiv/payfac-mp-sdk-java/total.svg)
-[![GitHub](https://img.shields.io/github/license/vantiv/payfac-mp-sdk-java.svg)](https://github.com/Vantiv/payfac-mp-sdk-java/13.x/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/vantiv/payfac-mp-sdk-java.svg)](https://github.com/Vantiv/payfac-mp-sdk-java/issues)
+![Github All Releases](https://img.shields.io/github/downloads/worldpay/payfac-mp-sdk-dotnet/total.svg)
+[![GitHub](https://img.shields.io/github/license/worldpay/payfac-mp-sdk-dotnet.svg)](https://github.com/Worldpay/payfac-mp-sdk-dotnet/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/worldpay/payfac-mp-sdk-dotnet.svg)](https://github.com/Worldpay/payfac-mp-sdk-dotnet/issues)
 
 # payfac-mp-sdk-dotnet
 
@@ -127,23 +127,23 @@ Compile and run this file.  You should see the following result:
 ~~~
 
 ## Versioning
-For the versions available, see the [tags on this repository](https://github.com/vantiv/payfac-mp-sdk-java/tags). 
+For the versions available, see the [tags on this repository](https://github.com/Worldpay/payfac-mp-sdk-dotnet/tags). 
 
 ## Changelog
-For the list of changes, check out the [changelog](https://github.com/Vantiv/payfac-mp-sdk-dotnet/blob/master/CHANGELOG.md)
+For the list of changes, check out the [changelog](https://github.com/Worldpay/payfac-mp-sdk-dotnet/blob/master/CHANGELOG.md)
 
 ## Authors
 
 * [**Charmik Sheth**](https://github.com/Charmik-Sheth)
 * [**Kartik Dave**](https://github.com/davekartik24)
 
-See also the list of [contributors](https://github.com/vantiv/payfac-mp-sdk-dotnet/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Worldpay/payfac-mp-sdk-dotnet/contributors) who participated in this project.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Vantiv/payfac-mp-sdk-dotnet/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Worldpay/payfac-mp-sdk-dotnet/blob/master/LICENSE) file for details
 
 ## Examples
-More examples can be found in [Functional and Unit Tests](https://github.com/Vantiv/payfac-mp-sdk-dotnet/tree/master/PayFacMpSDK/PayFacMpSDKTest)
+More examples can be found in [Functional and Unit Tests](https://github.com/Worldpay/payfac-mp-sdk-dotnet/tree/master/PayFacMpSDK/PayFacMpSDKTest)
 
 ## Support
 Please contact [Worldpay eCommerce](mailto:PayFacEComm@worldpay.com) to receive valid merchant credentials in order to run tests successfully or if you require assistance in any way. SDK Support can also be reached at

@@ -108,8 +108,6 @@ namespace PayFacMpSDKTest.Unit
                          "<yearsInBusiness>12</yearsInBusiness>" +
                          "<pciLevel>4</pciLevel>"+
                          "<merchantCategoryCode>1234</merchantCategoryCode>" +
-                         "<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>" +
-                         "<language>" + Versions.LANGUAGE + "</language>" +
                          "</legalEntityCreateRequest>";
 
             string expectedResposne = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

@@ -106,6 +106,12 @@ namespace PayFacMpSDK
                 complianceProducts.Serialize(xmlBuilder);
                 xmlBuilder.Append("</complianceProducts>");
             }
+            if (valueAddedServices != null)
+            {
+                xmlBuilder.Append("<valueAddedServices>");
+                valueAddedServices.Serialize(xmlBuilder);
+                xmlBuilder.Append("</valueAddedServices>");
+            }
             xmlBuilder.Append("</subMerchantUpdateRequest>");
             Console.WriteLine(xmlBuilder.ToString());
             return xmlBuilder.ToString();

@@ -193,7 +193,7 @@ namespace PayFacMpSDK
         {
             xmlBuilder.Append("<code>" + code + "</code>");
             if (name != null) xmlBuilder.Append("<name>" + name + "</name>");
-            if (active != null) xmlBuilder.Append("<active>" + active.ToString().ToLower() + "</active>");
+            xmlBuilder.Append("<active>" + active.ToString().ToLower() + "</active>");
             if (activationDateSpecified) xmlBuilder.Append("<activationDate>" + activationDate.ToString("yyyy-MM-dd") + "</activationDate>");
             if (deActivationDateSpecified) xmlBuilder.Append("<deActivationDate>" + deActivationDate.ToString("yyyy-MM-dd") + "</deActivationDate>");
             if (complienceStatus != null) xmlBuilder.Append("<complianceStatus>" + complienceStatus + "</complianceStatus>");
@@ -369,6 +369,31 @@ namespace PayFacMpSDK
             xmlBuilder.Append("<phoneVerified>" + phoneVerified + "</phoneVerified>");
             xmlBuilder.Append("<ssnVerified>" + ssnVerified + "</ssnVerified>");
             xmlBuilder.Append("<dobVerified>" + dobVerified + "</dobVerified>");
+        }
+    }
+
+
+
+    public partial class valueAddedServices
+    {
+
+        public void Serialize(StringBuilder xmlBuilder)
+        {
+            foreach (var serviceMethod in serviceField)
+            {
+                xmlBuilder.Append("<service>");
+                serviceMethod.Serialize(xmlBuilder);
+                xmlBuilder.Append("</service>");
+            }
+        }
+    }
+
+    public partial class serviceList
+    {
+        public void Serialize(StringBuilder xmlBuilder)
+        {
+            xmlBuilder.Append("<code>" + code + "</code>");
+            xmlBuilder.Append("<enabled>" + enabled.ToString().ToLower() + "</enabled>");
         }
     }
 }

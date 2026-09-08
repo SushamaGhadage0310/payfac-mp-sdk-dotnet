@@ -88,6 +88,10 @@ namespace PayFacMpSDKTest.Functional
                 complianceProducts = new complianceProducts
                 {
                     productField = new System.Collections.Generic.List<complianceProductsList>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
             };
 
@@ -99,6 +103,11 @@ namespace PayFacMpSDKTest.Functional
             
 
             request.complianceProducts.productField.Add(newProduct);
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
 
             var categoryType = new string("GC");

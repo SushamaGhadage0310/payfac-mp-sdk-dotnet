@@ -73,7 +73,12 @@ namespace PayFacMpSDKTest.Unit
                 complianceProducts = new complianceProducts
                 {
                     productField = new System.Collections.Generic.List<complianceProductsList>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
+
             };
 
 
@@ -85,6 +90,11 @@ namespace PayFacMpSDKTest.Unit
             newProduct.deActivationDate = System.DateTime.Parse("2025 - 04 - 03");
 
             request.complianceProducts.productField.Add(newProduct);
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
             var categoryType = new string("GC");
             //var categoryType1 = new string("SM");
@@ -162,6 +172,12 @@ namespace PayFacMpSDKTest.Unit
                              "<deActivationDate>2025-04-03</deActivationDate>" +
                              "</product>" +
                          "</complianceProducts>" +
+                             "<valueAddedServices>" +
+                            "<service>" +
+                                "<code>DISPUTE_DEFENDER</code>" +
+                                "<enabled>true</enabled>" +
+                            "</service><" +
+                         "/valueAddedServices>" +
 
                          "</subMerchantUpdateRequest>";
 

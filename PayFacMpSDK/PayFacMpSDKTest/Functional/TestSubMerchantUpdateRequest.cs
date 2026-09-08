@@ -79,6 +79,10 @@ namespace PayFacMpSDKTest.Functional
                 methodOfPayments = new methodOfPayments
                 {
                     methodField = new List<paymentMethod>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
             };
 
@@ -93,6 +97,12 @@ namespace PayFacMpSDKTest.Functional
             newMethod1.paymentType = "MASTERCARD";
             newMethod1.selectedTransactionType = "NONE";
             newMethod1.allowedTransactionTypes = "DEPOSITS_ONLY";
+
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
             request.merchantCategoryTypes.categoryTypeField.Add(categoryType);
             request.methodOfPayments.methodField.Add(newMethod);

@@ -91,6 +91,12 @@ namespace PayFacMpSDK
                 methodOfPayments.Serialize(xmlBuilder);
                 xmlBuilder.Append("</methodOfPayments>");
             }
+               if (valueAddedServices != null)
+            {
+                xmlBuilder.Append("<valueAddedServices>");
+                valueAddedServices.Serialize(xmlBuilder);
+                xmlBuilder.Append("</valueAddedServices>");
+            }
             xmlBuilder.Append("</subMerchantUpdateRequest>");
             Console.WriteLine(xmlBuilder.ToString());
             return xmlBuilder.ToString();

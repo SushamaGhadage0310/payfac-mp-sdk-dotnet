@@ -76,6 +76,10 @@ namespace PayFacMpSDKTest.Functional
                 merchantCategoryTypes = new merchantCategoryTypes
                 {
                     categoryTypeField = new System.Collections.Generic.List<string>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
             };
 
@@ -84,6 +88,11 @@ namespace PayFacMpSDKTest.Functional
 
             request.merchantCategoryTypes.categoryTypeField.Add(categoryType);
             request.merchantCategoryTypes.categoryTypeField.Add(categoryType1);
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
             response = request.PostSubMerchantCreateRequest(legalEntityId);
             Assert.NotNull(response.transactionId);

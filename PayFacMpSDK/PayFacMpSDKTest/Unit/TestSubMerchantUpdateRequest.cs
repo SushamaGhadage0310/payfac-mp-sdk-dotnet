@@ -63,9 +63,13 @@ namespace PayFacMpSDKTest.Unit
                 methodOfPayments = new methodOfPayments
                 {
                     methodField = new List<paymentMethod>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
 
-        };
+            };
             var categoryType = new string("GC");
             //var categoryType1 = new string("SM");
             var newMethod = new paymentMethod();
@@ -76,6 +80,11 @@ namespace PayFacMpSDKTest.Unit
             var newMethod1 = new paymentMethod();
             newMethod1.paymentType = "MASTERCARD";
             newMethod1.selectedTransactionType = "NONE";
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
             request.merchantCategoryTypes.categoryTypeField.Add(categoryType);
             request.methodOfPayments.methodField.Add(newMethod);
@@ -131,6 +140,12 @@ namespace PayFacMpSDKTest.Unit
                           "<selectedTransactionType>NONE</selectedTransactionType>" +
                            "</method>" +
                          "</methodOfPayments>" +
+                         "<valueAddedServices>" +
+                            "<service>" +
+                                "<code>DISPUTE_DEFENDER</code>" +
+                                "<enabled>true</enabled>" +
+                            "</service><" +
+                         "/valueAddedServices>" +
                          "</subMerchantUpdateRequest>";
 
             var expectedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

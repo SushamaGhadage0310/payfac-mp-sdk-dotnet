@@ -69,9 +69,18 @@ namespace PayFacMpSDKTest.Unit
                 merchantCategoryTypes = new merchantCategoryTypes
                 {
                     categoryTypeField = new System.Collections.Generic.List<string>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
             };
 
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
             var categoryType = new string("GC");
             var categoryType1 = new string("SM");
 
@@ -128,6 +137,12 @@ namespace PayFacMpSDKTest.Unit
         "</merchantCategoryTypes>" +
         "<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>" +
         "<language>" + Versions.LANGUAGE + "</language>" +
+        "<valueAddedServices>" +
+                            "<service>" +
+                                "<code>DISPUTE_DEFENDER</code>" +
+                                "<enabled>true</enabled>" +
+                            "</service><" +
+                         "/valueAddedServices>" +
         "</subMerchantCreateRequest>";
 
             string expectedResposne = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

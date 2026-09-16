@@ -65,8 +65,18 @@ namespace PayFacMpSDKTest.Unit
                 {
                     enabled = false
                 },
-                settlementCurrency = "USD"
+                settlementCurrency = "USD",
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
+                }
             };
+
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
         }
 
@@ -113,7 +123,13 @@ namespace PayFacMpSDKTest.Unit
         "</subMerchantFunding>" +
         "<settlementCurrency>USD</settlementCurrency>" +
         "<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>" +
-        "<language>" + Versions.LANGUAGE + "</language>" + 
+        "<language>" + Versions.LANGUAGE + "</language>" +
+        "<valueAddedServices>" +
+            "<service>" +
+                "<code>DISPUTE_DEFENDER</code>" +
+                "<enabled>true</enabled>" +
+            "</service><" +
+        "/valueAddedServices>" +
         "</subMerchantCreateRequest>";
 
             string expectedResposne = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

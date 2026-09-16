@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 // 
@@ -4936,6 +4937,20 @@ namespace PayFacMpSDK
                 
             }
         }
+
+        private valueAddedServices valueAddedServicesFields;
+
+        public valueAddedServices valueAddedServices
+        {
+            get
+            {
+                return this.valueAddedServicesFields;
+            }
+            set
+            {
+                this.valueAddedServicesFields = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -5738,6 +5753,20 @@ namespace PayFacMpSDK
                 this.taxAuthorityStateField = value;
             }
         }
+
+        private valueAddedServices valueAddedServicesFields;
+
+        public valueAddedServices valueAddedServices
+        {
+            get
+            {
+                return this.valueAddedServicesFields;
+            }
+            set
+            {
+                this.valueAddedServicesFields = value;
+            }
+        }
     }
 
     /// <remarks/>
@@ -6014,5 +6043,75 @@ namespace PayFacMpSDK
                 this.responseDescriptionField = value;
             }
         }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://payfac.vantivcnp.com/api/merchant/onboard")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://payfac.vantivcnp.com/api/merchant/onboard", IsNullable = false)]
+    public partial class valueAddedServices
+    {
+        public List<serviceList> serviceField;
+        public valueAddedServices()
+        {
+            serviceField = new List<serviceList>();
+        }
+    }
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://payfac.vantivcnp.com/api/merchant/onboard")]
+    public partial class serviceList
+    {
+        public valueAddedServiceProductCode codeField;
+
+        public bool? enabledField;
+
+
+        public valueAddedServiceProductCode code
+        {
+            get
+            {
+                return this.codeField;
+            }
+            set
+            {
+                this.codeField = value;
+            }
+        }
+
+
+        /// remark
+        public bool? enabled
+        {
+            get
+            {
+                return this.enabledField;
+            }
+            set
+            {
+
+                this.enabledField = value;
+            }
+        }
+    }
+
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://payfac.vantivcnp.com/api/merchant/onboard")]
+    public enum valueAddedServiceProductCode
+    {
+
+        /// <remarks/>
+        DISPUTE_DEFENDER,
+
+
+
     }
 }

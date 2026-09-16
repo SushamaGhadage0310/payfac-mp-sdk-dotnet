@@ -69,8 +69,17 @@ namespace PayFacMpSDKTest.Functional
                 {
                     enabled = true,
 
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
             };
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
             response = request.PutSubMerchantUpdateRequest(legalEntityId, subMerchantId);
             Assert.NotNull(response.transactionId);

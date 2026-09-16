@@ -72,8 +72,18 @@ namespace PayFacMpSDKTest.Functional
                 {
                     enabled = false
                 },
-                settlementCurrency = "USD"
+                settlementCurrency = "USD",
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
+                }
             };
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
+
 
             response = request.PostSubMerchantCreateRequest(legalEntityId);
             Assert.NotNull(response.transactionId);

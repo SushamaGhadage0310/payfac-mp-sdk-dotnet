@@ -54,8 +54,17 @@ namespace PayFacMpSDKTest.Unit
                 {
                     enabled = true,
                     eCheckBillingDescriptor = "9785552222",
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
+
             };
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
         }
 
         [Test]
@@ -93,6 +102,12 @@ namespace PayFacMpSDKTest.Unit
                          "<eCheck enabled=\"true\">" +
                          "<eCheckBillingDescriptor>9785552222</eCheckBillingDescriptor>" +
                          "</eCheck>" +
+                         "<valueAddedServices>" +
+                         "<service>" +
+                         "<code>DISPUTE_DEFENDER</code>" +
+                         "<enabled>true</enabled>" +
+                         "</service>" +
+                         "</valueAddedServices>" +
                          "</subMerchantUpdateRequest>";
 
             var expectedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

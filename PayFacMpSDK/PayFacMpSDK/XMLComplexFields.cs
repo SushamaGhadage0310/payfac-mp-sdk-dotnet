@@ -193,7 +193,7 @@ namespace PayFacMpSDK
         {
             xmlBuilder.Append("<code>" + code + "</code>");
             if (name != null) xmlBuilder.Append("<name>" + name + "</name>");
-            xmlBuilder.Append("<active>" + active.ToString().ToLower() + "</active>");
+            if (active != null) xmlBuilder.Append("<active>" + active.ToString().ToLower() + "</active>");
             if (activationDateSpecified) xmlBuilder.Append("<activationDate>" + activationDate.ToString("yyyy-MM-dd") + "</activationDate>");
             if (deActivationDateSpecified) xmlBuilder.Append("<deActivationDate>" + deActivationDate.ToString("yyyy-MM-dd") + "</deActivationDate>");
             if (complienceStatus != null) xmlBuilder.Append("<complianceStatus>" + complienceStatus + "</complianceStatus>");

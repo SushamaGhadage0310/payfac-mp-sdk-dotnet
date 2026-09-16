@@ -1,5 +1,9 @@
 CHANGELOG
 ---------
+
+##16.0.0
+* **Feature** Merchant Category Code No Longer Optional on Legal Entity Create Request
+
 ## 15.0.3
 * **Feature** MPAPI SDK Update for MerchantCategoryCode Schema Change.
 

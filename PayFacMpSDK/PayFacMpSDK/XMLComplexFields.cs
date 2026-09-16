@@ -371,4 +371,30 @@ namespace PayFacMpSDK
             xmlBuilder.Append("<dobVerified>" + dobVerified + "</dobVerified>");
         }
     }
+
+public partial class valueAddedServices
+{
+
+    public void Serialize(StringBuilder xmlBuilder)
+    {
+        foreach (var serviceMethod in serviceField)
+        {
+            xmlBuilder.Append("<service>");
+            serviceMethod.Serialize(xmlBuilder);
+            xmlBuilder.Append("</service>");
+        }
+    }
+}
+
+public partial class serviceList
+{
+    public void Serialize(StringBuilder xmlBuilder)
+    {
+        xmlBuilder.Append("<code>" + code + "</code>");
+        xmlBuilder.Append("<enabled>" + enabled.ToString().ToLower() + "</enabled>");
+    }
+}
+
+
+
 }

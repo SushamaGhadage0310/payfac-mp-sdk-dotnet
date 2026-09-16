@@ -60,8 +60,9 @@ namespace PayFacMpSDKTest.Functional
                     stakePercent = 33
                 },
                 yearsInBusiness = "12",
-                pciLevel = pciLevelScore.Level4
-                
+                pciLevel = pciLevelScore.Level4,
+                merchantCategoryCode = "1232"
+
             };
 
             response = request.PostLegalEntityCreateRequest();
@@ -116,7 +117,8 @@ namespace PayFacMpSDKTest.Functional
                     },
                     stakePercent = 33
                 },
-                yearsInBusiness = "12"
+                yearsInBusiness = "12",
+                merchantCategoryCode = "1232"
             };
 
             response = request.PostLegalEntityCreateRequest();
@@ -171,7 +173,8 @@ namespace PayFacMpSDKTest.Functional
                     },
                     stakePercent = 33
                 },
-                yearsInBusiness = "12"
+                yearsInBusiness = "12",
+                merchantCategoryCode = "1232"
             };
 
             response = request.PostLegalEntityCreateRequest();
@@ -225,7 +228,8 @@ namespace PayFacMpSDKTest.Functional
                     },
                     stakePercent = 33
                 },
-                yearsInBusiness = "12"
+                yearsInBusiness = "12",
+                merchantCategoryCode = "1232"
             };
 
             response = request.PostLegalEntityCreateRequest();

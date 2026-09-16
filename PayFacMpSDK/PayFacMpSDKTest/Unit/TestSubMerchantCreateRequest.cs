@@ -77,7 +77,12 @@ namespace PayFacMpSDKTest.Unit
                 complianceProducts = new complianceProducts
                 {
                     productField = new System.Collections.Generic.List<complianceProductsList>()
-                }
+                },
+                 valueAddedServices = new valueAddedServices
+                 {
+                     serviceField = new System.Collections.Generic.List<serviceList>()
+                 }
+
             };
 
 
@@ -93,6 +98,11 @@ namespace PayFacMpSDKTest.Unit
             //var categoryType1 = new string("SM");
 
             request.complianceProducts.productField.Add(newProduct);
+
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
 
             request.merchantCategoryTypes.categoryTypeField.Add(categoryType);
            // request.merchantCategoryTypes.categoryTypeField.Add(categoryType1);
@@ -158,6 +168,12 @@ namespace PayFacMpSDKTest.Unit
     "</complianceProducts>"+
         "<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>" +
         "<language>" + Versions.LANGUAGE + "</language>" +
+        "<valueAddedServices>" +
+            "<service>" +
+                "<code>DISPUTE_DEFENDER</code>" +
+                "<enabled>true</enabled>" +
+            "</service><" +
+        "/valueAddedServices>"+
         "</subMerchantCreateRequest>";
 
             string expectedResposne = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

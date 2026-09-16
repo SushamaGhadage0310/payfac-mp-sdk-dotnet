@@ -73,6 +73,10 @@ namespace PayFacMpSDKTest.Unit
                 complianceProducts = new complianceProducts
                 {
                     productField = new System.Collections.Generic.List<complianceProductsList>()
+                },
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
                 }
             };
 
@@ -86,6 +90,12 @@ namespace PayFacMpSDKTest.Unit
 
             request.complianceProducts.productField.Add(newProduct);
 
+            var newService = new serviceList();
+            newService.code = valueAddedServiceProductCode.DISPUTE_DEFENDER;
+            newService.enabled = true;
+            request.valueAddedServices.serviceField.Add(newService);
+
+
             var categoryType = new string("GC");
             //var categoryType1 = new string("SM");
             var newMethod = new paymentMethod();
@@ -97,9 +107,13 @@ namespace PayFacMpSDKTest.Unit
             newMethod1.paymentType = "MASTERCARD";
             newMethod1.selectedTransactionType = "NONE";
 
+
+          
             request.merchantCategoryTypes.categoryTypeField.Add(categoryType);
             request.methodOfPayments.methodField.Add(newMethod);
             request.methodOfPayments.methodField.Add(newMethod1);
+
+
             //request.merchantCategoryTypes.categoryTypeField.Add(categoryType1);
         }
 
@@ -162,7 +176,12 @@ namespace PayFacMpSDKTest.Unit
                              "<deActivationDate>2025-04-03</deActivationDate>" +
                              "</product>" +
                          "</complianceProducts>" +
-
+                         "<valueAddedServices>" +
+                            "<service>" +
+                                "<code>DISPUTE_DEFENDER</code>" +
+                                "<enabled>true</enabled>" +
+                            "</service><" +
+                         "/valueAddedServices>" +
                          "</subMerchantUpdateRequest>";
 
             var expectedResponse = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

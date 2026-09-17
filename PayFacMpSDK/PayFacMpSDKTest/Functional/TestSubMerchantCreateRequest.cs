@@ -567,7 +567,8 @@ namespace PayFacMpSDKTest.Functional
                 {
                     productField = new System.Collections.Generic.List<complianceProductsList>()
                 },
-
+                sdkVersion = Versions.SDK_VERSION,
+                language = Versions.LANGUAGE,
                 valueAddedServices = new valueAddedServices
                 {
                     serviceField = new System.Collections.Generic.List<serviceList>()

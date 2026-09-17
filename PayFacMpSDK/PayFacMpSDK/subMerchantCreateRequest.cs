@@ -102,16 +102,14 @@ namespace PayFacMpSDK
                 complianceProducts.Serialize(xmlBuilder);
                 xmlBuilder.Append("</complianceProducts>");
             }
-            xmlBuilder.Append("<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>");
-            xmlBuilder.Append("<language>" + Versions.LANGUAGE + "</language>");
-
             if (valueAddedServices != null)
             {
                 xmlBuilder.Append("<valueAddedServices>");
                 valueAddedServices.Serialize(xmlBuilder);
                 xmlBuilder.Append("</valueAddedServices>");
             }
-
+            xmlBuilder.Append("<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>");
+            xmlBuilder.Append("<language>" + Versions.LANGUAGE + "</language>");
             xmlBuilder.Append("</subMerchantCreateRequest>");
             Console.WriteLine(xmlBuilder.ToString());
             return xmlBuilder.ToString();

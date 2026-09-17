@@ -29,6 +29,7 @@ namespace PayFacMpSDKTest.Functional
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "1234567891",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
                     {
@@ -64,6 +65,7 @@ namespace PayFacMpSDKTest.Functional
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "1234567891",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
                     {
@@ -99,6 +101,7 @@ namespace PayFacMpSDKTest.Functional
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "1234567891",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
                     {
@@ -138,6 +141,7 @@ namespace PayFacMpSDKTest.Functional
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "1234567891",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
                     {
@@ -176,6 +180,7 @@ namespace PayFacMpSDKTest.Functional
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "1234567891",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
                     {
@@ -214,6 +219,7 @@ namespace PayFacMpSDKTest.Functional
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "1234567891",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
                     {

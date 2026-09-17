@@ -239,9 +239,9 @@ namespace PayFacMpSDK
             if(title != null) xmlBuilder.Append("<title>" + title + "</title>");
             xmlBuilder.Append("<firstName>" + firstName + "</firstName>");
             xmlBuilder.Append("<lastName>" + lastName + "</lastName>");
-            if(emailAddress != null) xmlBuilder.Append("<emailAddress>" + emailAddress + "</emailAddress>");
+            xmlBuilder.Append("<emailAddress>" + emailAddress + "</emailAddress>");
             if(ssn != null) xmlBuilder.Append("<ssn>" + ssn + "</ssn>");
-            if(contactPhone != null) xmlBuilder.Append("<contactPhone>" + contactPhone + "</contactPhone>");
+            xmlBuilder.Append("<contactPhone>" + contactPhone + "</contactPhone>");
             xmlBuilder.Append("<dateOfBirth>" + dateOfBirth.ToString("yyyy-MM-dd") + "</dateOfBirth>");
             if(driversLicense != null) xmlBuilder.Append("<driversLicense>" + driversLicense + "</driversLicense>");
             if(driversLicenseState != null) xmlBuilder.Append("<driversLicenseState>" + driversLicenseState + "</driversLicenseState>");

@@ -70,20 +70,24 @@ namespace PayFacMpSDKTest.Unit
                 {
                     categoryTypeField = new System.Collections.Generic.List<string>()
                 },
-                countryOfOrigin= "USA",
-                revenueBoost = new subMerchantRevenueBoostFeature { 
-                enabled = true,
+                countryOfOrigin = "USA",
+                revenueBoost = new subMerchantRevenueBoostFeature
+                {
+                    enabled = true,
                 },
                 complianceProducts = new complianceProducts
                 {
                     productField = new System.Collections.Generic.List<complianceProductsList>()
                 },
-                 valueAddedServices = new valueAddedServices
-                 {
-                     serviceField = new System.Collections.Generic.List<serviceList>()
-                 }
+                valueAddedServices = new valueAddedServices
+                {
+                    serviceField = new System.Collections.Generic.List<serviceList>()
+                },
+                sdkVersion = Versions.SDK_VERSION,
+                language = Versions.LANGUAGE
 
             };
+
 
 
             var newProduct = new complianceProductsList();
@@ -166,14 +170,14 @@ namespace PayFacMpSDKTest.Unit
             "<deActivationDate>2025-04-02</deActivationDate>" +
         "</product>" +
     "</complianceProducts>"+
-        "<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>" +
-        "<language>" + Versions.LANGUAGE + "</language>" +
         "<valueAddedServices>" +
             "<service>" +
                 "<code>DISPUTE_DEFENDER</code>" +
                 "<enabled>true</enabled>" +
             "</service><" +
         "/valueAddedServices>"+
+         "<sdkVersion>" + Versions.SDK_VERSION + "</sdkVersion>" +
+        "<language>" + Versions.LANGUAGE + "</language>" +
         "</subMerchantCreateRequest>";
 
             string expectedResposne = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>" +

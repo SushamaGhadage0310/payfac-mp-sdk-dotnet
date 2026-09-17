@@ -40,7 +40,7 @@ namespace PayFacMpSDK
             xmlBuilder.Append("<legalEntityOwnershipType>" + legalEntityOwnershipType + "</legalEntityOwnershipType>");
             if (doingBusinessAs != null) xmlBuilder.Append("<doingBusinessAs>" + doingBusinessAs + "</doingBusinessAs>");
             if (taxId != null) xmlBuilder.Append("<taxId>" + taxId + "</taxId>");
-            if (contactPhone != null) xmlBuilder.Append("<contactPhone>" + contactPhone + "</contactPhone>");
+            xmlBuilder.Append("<contactPhone>" + contactPhone + "</contactPhone>");
             xmlBuilder.Append("<annualCreditCardSalesVolume>" + annualCreditCardSalesVolume + "</annualCreditCardSalesVolume>");
             xmlBuilder.Append("<hasAcceptedCreditCards>" + hasAcceptedCreditCards.ToString().ToLower() + "</hasAcceptedCreditCards>");
             xmlBuilder.Append("<address>");

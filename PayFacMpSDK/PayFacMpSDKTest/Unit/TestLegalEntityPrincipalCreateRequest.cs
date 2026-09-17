@@ -24,6 +24,7 @@ namespace PayFacMpSDKTest.Unit
                     firstName = "Jon",
                     lastName = "Snow",
                     emailAddress = "abc@email.com",
+                    contactPhone = "781765983",
                     ssn = "123450015",
                     dateOfBirth = new DateTime(1980, 10, 12),
                     address = new principalAddress
@@ -52,6 +53,7 @@ namespace PayFacMpSDKTest.Unit
                          "<lastName>Snow</lastName>" +
                          "<emailAddress>abc@email.com</emailAddress>" +
                          "<ssn>123450015</ssn>" +
+                         "<contactPhone>781765983</contactPhone>" +
                          "<dateOfBirth>1980-10-12</dateOfBirth>" +
                          "<address>" +
                          "<streetAddress1>p2 street address 1</streetAddress1>" +
